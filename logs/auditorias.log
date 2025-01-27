@@ -1,0 +1,63 @@
+2025-01-27T21:24:08.275Z [info]: Servidor corriendo en el puerto 3000
+2025-01-27T21:25:02.902Z [info]: Chequeo de datos huérfanos completado
+2025-01-27T21:25:19.915Z [error]: Error en chequeo de datos duplicados: RequestError: Cannot use an aggregate or a subquery in an expression used for the group by list of a GROUP BY clause.
+2025-01-27T21:25:30.606Z [info]: Chequeo de Foreign Key completado
+2025-01-27T21:25:48.631Z [info]: Chequeo de integridad referencial completado
+2025-01-27T21:25:51.488Z [info]: Chequeo de integridad referencial para inserción completado
+2025-01-27T21:25:57.603Z [info]: Chequeo de claves primarias completado
+2025-01-27T21:26:02.545Z [info]: Chequeo de triggers completado
+2025-01-27T21:26:08.781Z [info]: Chequeo de relaciones que deberían existir completado
+2025-01-27T21:26:14.649Z [info]: Chequeo de relaciones existentes completado
+2025-01-27T21:34:39.722Z [info]: Chequeo de Foreign Key completado
+2025-01-27T21:34:42.857Z [error]: Error en chequeo de datos duplicados: RequestError: Cannot use an aggregate or a subquery in an expression used for the group by list of a GROUP BY clause.
+2025-01-27T22:02:44.886Z [info]: Servidor corriendo en el puerto 3000
+2025-01-27T22:03:20.706Z [error]: Error en chequeo de datos huérfanos: Error: Error conectando a la base de datos: Login failed for user 'auditorUser'.
+2025-01-27T22:04:13.960Z [error]: Error en chequeo de datos duplicados: RequestError: Cannot use an aggregate or a subquery in an expression used for the group by list of a GROUP BY clause.
+2025-01-27T22:07:12.881Z [info]: Servidor corriendo en el puerto 3000
+2025-01-27T22:08:11.114Z [info]: Servidor corriendo en el puerto 3000
+2025-01-27T22:08:32.115Z [info]: Chequeo de datos huérfanos completado
+2025-01-27T22:08:37.308Z [error]: Error en chequeo de datos duplicados: RequestError: Unclosed quotation mark after the character string ';
+
+    EXEC sp_executesql @sql;
+    FETCH NEXT FROM table_cursor INTO @tableName;
+  END;
+
+  CLOSE table_cursor;
+  DEALLOCATE table_cursor;
+
+  SELECT * FROM #Duplicates;
+'.
+2025-01-27T22:08:40.206Z [info]: Chequeo de Foreign Key completado
+2025-01-27T22:08:43.563Z [info]: Chequeo de integridad referencial completado
+2025-01-27T22:08:46.201Z [info]: Chequeo de integridad referencial para inserción completado
+2025-01-27T22:08:49.417Z [info]: Chequeo de claves primarias completado
+2025-01-27T22:08:51.803Z [info]: Chequeo de triggers completado
+2025-01-27T22:08:55.479Z [info]: Chequeo de relaciones que deberían existir completado
+2025-01-27T22:09:00.209Z [info]: Chequeo de relaciones existentes completado
+2025-01-27T22:22:02.013Z [info]: Servidor corriendo en el puerto 3000
+2025-01-27T22:23:44.641Z [info]: Servidor corriendo en el puerto 3000
+2025-01-27T22:23:51.945Z [info]: Chequeo de datos huérfanos completado
+2025-01-27T22:25:07.698Z [info]: Chequeo de Foreign Key completado
+2025-01-27T22:25:10.972Z [info]: Chequeo de integridad referencial completado
+2025-01-27T22:25:13.922Z [info]: Chequeo de integridad referencial para inserción completado
+2025-01-27T22:25:19.565Z [info]: Chequeo de claves primarias completado
+2025-01-27T22:25:24.406Z [info]: Chequeo de triggers completado
+2025-01-27T22:25:27.125Z [info]: Chequeo de relaciones que deberían existir completado
+2025-01-27T22:25:29.716Z [info]: Chequeo de relaciones existentes completado
+2025-01-27T22:47:08.788Z [info]: Servidor corriendo en el puerto 3000
+2025-01-27T22:47:15.596Z [info]: Chequeo de datos huérfanos: [{"TableName":"Pedidos","OrphanCount":0},{"TableName":"DetallesPedido","OrphanCount":0},{"TableName":"DetallesPedido","OrphanCount":0}]
+2025-01-27T22:47:20.630Z [error]: Error en chequeo de datos duplicados: Incorrect syntax near ','.
+2025-01-27T22:47:24.747Z [info]: Chequeo de Foreign Key: []
+2025-01-27T22:49:59.107Z [info]: Servidor corriendo en el puerto 3000
+2025-01-27T22:50:13.311Z [info]: Servidor corriendo en el puerto 3000
+2025-01-27T22:50:16.986Z [info]: Servidor corriendo en el puerto 3000
+2025-01-27T22:50:18.264Z [info]: Servidor corriendo en el puerto 3000
+2025-01-27T22:50:25.243Z [info]: Chequeo de datos huérfanos: [{"TableName":"Pedidos","OrphanCount":0},{"TableName":"DetallesPedido","OrphanCount":0},{"TableName":"DetallesPedido","OrphanCount":0}]
+2025-01-27T22:50:28.531Z [info]: Chequeo de datos duplicados: [{"TableName":"SinClavePrimaria","DuplicateCount":2}]
+2025-01-27T22:50:36.779Z [info]: Chequeo de Foreign Key: []
+2025-01-27T22:50:44.538Z [info]: Chequeo de integridad referencial (eliminación y actualización): []
+2025-01-27T22:51:05.614Z [info]: Chequeo de integridad referencial (inserción): [{"ForeignKeyName":"FK_Pedidos_Usuarios","ParentTable":"Pedidos","ReferencedTable":"Usuarios","ParentColumn":"UsuarioID","IsNullable":true},{"ForeignKeyName":"FK_DetallesPedido_Pedidos","ParentTable":"DetallesPedido","ReferencedTable":"Pedidos","ParentColumn":"PedidoID","IsNullable":true},{"ForeignKeyName":"FK_DetallesPedido_Productos","ParentTable":"DetallesPedido","ReferencedTable":"Productos","ParentColumn":"ProductoID","IsNullable":true}]
+2025-01-27T22:51:14.060Z [info]: Chequeo de claves primarias: [{"TableName":"Usuarios","PrimaryKeyStatus":"Has Primary Key"},{"TableName":"Pedidos","PrimaryKeyStatus":"Has Primary Key"},{"TableName":"Productos","PrimaryKeyStatus":"Has Primary Key"},{"TableName":"DetallesPedido","PrimaryKeyStatus":"Has Primary Key"},{"TableName":"SinClavePrimaria","PrimaryKeyStatus":"No Primary Key"}]
+2025-01-27T22:51:20.121Z [info]: Chequeo de triggers: [{"TriggerName":"TRG_UsuarioAudit","ParentTable":"Usuarios","TableName":"Usuarios","TriggerDefinition":"CREATE   TRIGGER TRG_UsuarioAudit\r\nON Usuarios\r\nAFTER INSERT, DELETE, UPDATE\r\nAS\r\nBEGIN\r\n    PRINT 'Trigger ejecutado en tabla Usuarios.';\r\nEND;\r\n"}]
+2025-01-27T22:51:31.102Z [info]: Chequeo de relaciones que deberían existir: [{"ParentTable":"Usuarios","ParentColumn":"UsuarioID","PotentialReferencedTable":"UsuarioID"},{"ParentTable":"Pedidos","ParentColumn":"PedidoID","PotentialReferencedTable":"PedidoID"},{"ParentTable":"Productos","ParentColumn":"ProductoID","PotentialReferencedTable":"ProductoID"},{"ParentTable":"DetallesPedido","ParentColumn":"DetalleID","PotentialReferencedTable":"DetalleID"}]
+2025-01-27T22:51:42.188Z [info]: Chequeo de relaciones existentes: [{"ForeignKeyName":"FK_Pedidos_Usuarios","ParentTable":"Pedidos","ParentColumn":"UsuarioID","ReferencedTable":"Usuarios","ReferencedColumn":"UsuarioID"},{"ForeignKeyName":"FK_DetallesPedido_Pedidos","ParentTable":"DetallesPedido","ParentColumn":"PedidoID","ReferencedTable":"Pedidos","ReferencedColumn":"PedidoID"},{"ForeignKeyName":"FK_DetallesPedido_Productos","ParentTable":"DetallesPedido","ParentColumn":"ProductoID","ReferencedTable":"Productos","ReferencedColumn":"ProductoID"}]
